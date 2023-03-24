@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+*{
+margin:0;
+padding:0;
+}
+div{
+display:block;
+}
+::selection{
+background:none;
+}
+body{
+scroll-behaviour:smooth;
+background:#1d1d1d;
+}
+#header{
+z-index:32;
+display:inline;
+position:sticky;
+top:0;
+border-bottom-left-radius:7px;
+border-bottom-right-radius:7px;
+overflow:hidden;
+background:transparent;
+height:6vh;
+}
+#header a{
+font-family:arial;
+color:White;
+text-decoration:none;
+height:9vh;
+margin:2px;
+font-size:20px;
+padding:15px;
+float:right;
+display:inline-block;
+}
+#header a:hover{
+background:rgba(255,255,255,0.1);
+}
+#header p::first-letter{
+color:teal;
+font-size:35px;
+font-family:'sans-serif';
+font-weight:bold;
+}
+#header p{
+float:left;
+color:white;
+font-size:28px;
+font-family:'sans-serif','arial';
+font-weight:bold;
+padding:6px 0px 0px 12px;
+letter-spacing:-1px;
+}
+#cover{
+
+width:100vw;
+height:100vh;
+background:url("https://wallpapers.com/images/featured/outer-space-3pae4flbryaputyl.jpg");
+background-size:cover;
+background-repeat:no-repeat;
+}
+#cover p{
+z-index:2;
+color:white;
+font-family:Sans-serif;
+font-size:32px;
+letter-spacing:3.4px;
+font-weight:bold;
+position:absolute;
+top:50%;
+left:15%;
+cursor:default;
+}
+#h{
+color:white;
+font-size:22px;
+font-family:poppins;
+background:transparent;
+border:2px solid white;
+border-bottom-left-radius:100%;
+padding:32px;
+width:20vh;
+position:Absolute;
+cursor:pointer;
+top:60%;
+left:43%;
+transition:all 2.7s;
+border-top-right-radius:100%;
+}
+#j{
+border-radius:0px;
+color:white;
+font-size:22px;
+font-family:poppins;
+background:transparent;
+border:2px solid white;
+border-bottom-right-radius:100%;
+padding:32px;
+width:20vh;
+z-index:1;
+position:Absolute;
+top:60%;
+cursor:pointer;
+transition:all 2.7s;
+left:43%;
+border-top-left-radius:100%;
+
+}
+#menu{
+
+height:100vh;
+width:100vw;
+
+}
+</style>
+
+<div id="header">
+<p>Space</p>
+<a href="#Contact">Contact Us</a>
+<a href="#store">Planets</a>
+
+<a href="#menu">Intro</a>
+
+<a href="#cover">Home</a>
+
+</div>
+<div id="cover">
+<p>The Universe is beyond our thoughts and imaginations</p>
+<button id="h" onmouseover="ro()" onmouseout="d()">Explore</button>
+<button id="j" onmouseover="ro()" onmouseout="d()">Explore</button>
+</div>
+<div id="menu"></div>
+</html><script>function d(){
+document.getElementById("h").style.transform="rotate(0deg)";
+document.getElementById("j").style.transform="rotate(0deg)";
+}
+function ro(){
+document.getElementById("h").style.transform="rotate(360deg)";
+document.getElementById("j").style.transform="rotate(-360deg)";
+}</script>
