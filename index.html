@@ -1,147 +1,196 @@
 
-
 <!DOCTYPE html>
-<html>
-  <title>Space</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wildlife</title>
+</head>
+<script>
+    var s="Are you ready to Explore?";
+    var s1="explore the Wild?";
+    var s2="go for an adventure?";
+    var i=0;
+    setInterval(write,100);
+    function write(){
+    if(i<s.length){
+
+    document.getElementById("ctext").innerHTML+=s.charAt(i);
+    i++;
+
+    }
+    else if(i===s.length){
+        state=1;
+    
+    }
+  if(state===1){
+    document.getElementById("cbutton").style.opacity='1';
+   
+  }
+}
+</script>
 <style>
-*{
-margin:0;
-padding:0;
-}
-div{
-display:block;
-}
-::selection{
-background:none;
-}
-body{
-scroll-behaviour:smooth;
-background:#1d1d1d;
-}
-#header{
-z-index:32;
-display:inline;
-position:sticky;
-top:0;
-border-bottom-left-radius:7px;
-border-bottom-right-radius:7px;
-overflow:hidden;
-background:transparent;
-height:6vh;
-}
-#header a{
-font-family:arial;
-color:White;
-text-decoration:none;
-height:9vh;
-margin:2px;
-font-size:20px;
-padding:15px;
-float:right;
-display:inline-block;
-}
-#header a:hover{
-background:rgba(255,255,255,0.1);
-}
-#header p::first-letter{
-color:teal;
-font-size:35px;
-font-family:'sans-serif';
-font-weight:bold;
-}
-#header p{
-float:left;
-color:white;
-font-size:28px;
-font-family:'sans-serif','arial';
-font-weight:bold;
-padding:6px 0px 0px 12px;
-letter-spacing:-1px;
-}
-#cover{
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing: border-box;
+    }
+    html{
+        scroll-behavior: smooth;
+        display: flex;
+        flex-flow: column;
+        scroll-snap-type:y mandatory;
+    }
+    body{
+        background:black;
+        width: 100vw;
+        height:200vh;
+    }
+    #nav{
+        position: sticky;
+        top:3vh;
+        height: 0vh;
+        margin:22px 0px 0px 0px;
+  
+    }
+    #nav a{
+        padding:14px;
+        color:white;
+        text-decoration: none;
+        margin:12px 12px 0px 12px;
+        font-family: sans-serif;
+        font-size: 19px;
+        border-radius: 25px;
+        transition: all 0.5s;
+    }
+    #nav a:hover{
+        background:crimson;
+    }
+    #Logo{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 32px;
+        cursor: pointer;
+        color:white;
+        font-family: sans-serif;
+        letter-spacing: -1px;
+        display: inline-block;
+        margin:2vh 47vw 0vh 3vh;
+        
+    }
+    #cover{
+        width:100vw;
+        height: 100vh;
+        background-image: url("https://th.bing.com/th/id/OIG.WfvEb7_sOZU3ZKyVtovN?pid=ImgGn");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin: 0px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        scroll-snap-align: center;
+        background-position: center;
+    }
+    #ctext{
+       color: white;
+        font-size:8em;
 
-width:100vw;
-height:100vh;
-background:url("k.jpg");
-background-size:cover;
-background-repeat:no-repeat;
-}
-#cover p{
-z-index:2;
+        font-family: sans-serif;
+       
+
+    }
+ #ctext::first-letter{
+    color:rgb(66, 243, 119);
+ }
+ #cbutton{
+    background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+position: absolute;
+top:80%;
+left:1%;
+border:0px solid white;
+border-radius: 29px;
+border-bottom-left-radius: 0px;
 color:white;
-font-family:Sans-serif;
-font-size:32px;
-letter-spacing:3.4px;
-font-weight:bold;
-position:absolute;
-top:50%;
-left:15%;
-cursor:default;
-}
-#h{
-color:white;
-font-size:22px;
-font-family:poppins;
-background:transparent;
-border:2px solid white;
-border-bottom-left-radius:100%;
-padding:32px;
-width:20vh;
-position:Absolute;
+outline:none;
 cursor:pointer;
-top:60%;
-left:43%;
-transition:all 2.7s;
-border-top-right-radius:100%;
-}
-#j{
-border-radius:0px;
-color:white;
-font-size:22px;
-font-family:poppins;
-background:transparent;
-border:2px solid white;
-border-bottom-right-radius:100%;
-padding:32px;
-width:20vh;
-z-index:1;
-position:Absolute;
-top:60%;
-cursor:pointer;
-transition:all 2.7s;
-left:43%;
-border-top-left-radius:100%;
+border-top-right-radius: 0px;
+transition: all 0.4s;
+opacity: 0;
+font-size: 22px;
+padding:22px;
+ }
+ #cbutton:hover{
+    border-radius:29px;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+ }
+ #home{
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: center;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+ }
+ #cover a{
+    color:white;
+    text-decoration: none;
+    padding: 22px;
+ }
+ #slider{
+  width:300vw;
+  height:100vh;
+  display: flex;
 
-}
-#menu{
-
-height:100vh;
-width:100vw;
-
-}
+  flex-flow: row;
+ }
+ #slide1{
+    width:100vw;
+    height:100vh;
+ 
+    scroll-snap-align: center;
+ }
+ #slide2{
+    width:100vw;
+    height:100vh;
+    background-color: #c31432; 
+    scroll-snap-align: center;
+ }
+ #slide3{
+    scroll-snap-align: center;
+    width:100vw;
+    height:100vh;
+    background-color:#240b36; 
+   
+ }
 </style>
+<body>
 
-<div id="header">
-<p>Space</p>
-<a href="#Contact">Contact Us</a>
-<a href="#store">Planets</a>
+    <div id="nav">
+        <p id="Logo">Logo</p>
+        <a href="#home">Home</a>
+        <a href="#">Species</a>
+        <a href="#">Map</a>
+        <a href="#">Album</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div id="cover">
+        <p id="ctext"></p>
+        
+        <button id="cbutton"><a href="#home">Lets Explore</a></button>
+    </div>
+    <div id="home">
+    <div id="slider">
+        <div id="slide1"><a href="#slide2">Hwllllwo</a></div>
+        <div id="slide2"></div>
+        <div id="slide3"></div>
+    </div>
 
-<a href="#menu">Intro</a>
-
-<a href="#cover">Home</a>
-
-</div>
-<div id="cover">
-<p>The Universe is beyond our thoughts and imagination</p>
-<button id="h" onmouseover="ro()" onmouseout="d()">Explore</button>
-<button id="j" onmouseover="ro()" onmouseout="d()">Explore</button>
-</div>
-<div id="menu"></div>
-</html><script>function d(){
-document.getElementById("h").style.transform="rotate(0deg)";
-document.getElementById("j").style.transform="rotate(0deg)";
-}
-function ro(){
-document.getElementById("h").style.transform="rotate(360deg)";
-document.getElementById("j").style.transform="rotate(-360deg)";
-}</script>
+    </div>
+    
+</body>
+</html>
