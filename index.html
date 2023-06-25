@@ -1,196 +1,120 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wildlife</title>
-</head>
-<script>
-    var s="Are you ready to Explore?";
-    var s1="explore the Wild?";
-    var s2="go for an adventure?";
-    var i=0;
-    setInterval(write,100);
-    function write(){
-    if(i<s.length){
 
-    document.getElementById("ctext").innerHTML+=s.charAt(i);
-    i++;
 
-    }
-    else if(i===s.length){
-        state=1;
-    
-    }
-  if(state===1){
-    document.getElementById("cbutton").style.opacity='1';
-   
-  }
-}
-</script>
+<html>
 <style>
-    *{
-        margin:0px;
-        padding:0px;
-        box-sizing: border-box;
-    }
-    html{
-        scroll-behavior: smooth;
-        display: flex;
-        flex-flow: column;
-        scroll-snap-type:y mandatory;
-    }
-    body{
-        background:black;
-        width: 100vw;
-        height:200vh;
-    }
-    #nav{
-        position: sticky;
-        top:3vh;
-        height: 0vh;
-        margin:22px 0px 0px 0px;
-  
-    }
-    #nav a{
-        padding:14px;
-        color:white;
-        text-decoration: none;
-        margin:12px 12px 0px 12px;
-        font-family: sans-serif;
-        font-size: 19px;
-        border-radius: 25px;
-        transition: all 0.5s;
-    }
-    #nav a:hover{
-        background:crimson;
-    }
-    #Logo{
-        text-transform: uppercase;
-        font-weight: bold;
-        font-size: 32px;
-        cursor: pointer;
-        color:white;
-        font-family: sans-serif;
-        letter-spacing: -1px;
-        display: inline-block;
-        margin:2vh 47vw 0vh 3vh;
-        
-    }
-    #cover{
-        width:100vw;
-        height: 100vh;
-        background-image: url("https://th.bing.com/th/id/OIG.WfvEb7_sOZU3ZKyVtovN?pid=ImgGn");
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin: 0px;
-        display: flex;
-        justify-items: center;
-        align-items: center;
-        scroll-snap-align: center;
-        background-position: center;
-    }
-    #ctext{
-       color: white;
-        font-size:8em;
+body{
+margin:0px;
+overflow:hidden;
+height:100vh;
+display:flex;
+width:100vw;
+align-items:center;
+background:black;
+}
+#iwrap{
+display:flex;
+gap:4vmin;
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(0%,-50%);
 
-        font-family: sans-serif;
-       
+}
+span{
+width:30vmin;
+height:46vmin;
+background-size:cover;
+pointer-events:none;
 
-    }
- #ctext::first-letter{
-    color:rgb(66, 243, 119);
- }
- #cbutton{
-    background: #c31432;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+background-position:100% 50%;
+}
 
-position: absolute;
-top:80%;
-left:1%;
-border:0px solid white;
-border-radius: 29px;
-border-bottom-left-radius: 0px;
-color:white;
-outline:none;
-cursor:pointer;
-border-top-right-radius: 0px;
-transition: all 0.4s;
-opacity: 0;
-font-size: 22px;
-padding:22px;
- }
- #cbutton:hover{
-    border-radius:29px;
-    border-top-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-    
- }
- #home{
-    width: 100vw;
-    height: 100vh;
-    scroll-snap-align: center;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
- }
- #cover a{
-    color:white;
-    text-decoration: none;
-    padding: 22px;
- }
- #slider{
-  width:300vw;
-  height:100vh;
-  display: flex;
-
-  flex-flow: row;
- }
- #slide1{
-    width:100vw;
-    height:100vh;
- 
-    scroll-snap-align: center;
- }
- #slide2{
-    width:100vw;
-    height:100vh;
-    background-color: #c31432; 
-    scroll-snap-align: center;
- }
- #slide3{
-    scroll-snap-align: center;
-    width:100vw;
-    height:100vh;
-    background-color:#240b36; 
-   
- }
+#i4{
+background-size:75vmin;
+}
 </style>
 <body>
+<div id="iwrap" data-mouse-down-at="0" data-pper="0%" data-percentage="0%">
 
-    <div id="nav">
-        <p id="Logo">Logo</p>
-        <a href="#home">Home</a>
-        <a href="#">Species</a>
-        <a href="#">Map</a>
-        <a href="#">Album</a>
-        <a href="#">Contact Us</a>
-    </div>
-    <div id="cover">
-        <p id="ctext"></p>
-        
-        <button id="cbutton"><a href="#home">Lets Explore</a></button>
-    </div>
-    <div id="home">
-    <div id="slider">
-        <div id="slide1"><a href="#slide2">Hwllllwo</a></div>
-        <div id="slide2"></div>
-        <div id="slide3"></div>
-    </div>
+<span id="i" style="background-image:url('file:///home/chronos/u-870f62d1894ff89ac8f3744ae033c231a7c518a8/MyFiles/Downloads/Screenshot%202023-06-25%206.30.27%20PM.png');" draggable="false"></span>
 
-    </div>
-    
+
+<span id="i1" style="background-image:url(https://images.alphacoders.com/101/1019758.jpg);" draggable="false"></span>
+
+<span id="i2" style="background-image:url('https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-thumb.jpg')" draggable="false"></span>
+
+<span id="i3" style="background-image:url(https://wallpaperaccess.com/full/1850440.jpg);" draggable="false"></span>
+
+
+
+
+
+<span id="i4" style="background-image:url(https://images.pexels.com/photos/3052361/pexels-photo-3052361.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);" draggable="false"></span>
+
+
+
+<span id="i5" style="background-image:url(https://img.freepik.com/free-photo/blossom-floral-bouquet-decoration-colorful-beautiful-flowers-background-garden-flowers-plant-pattern-wallpapers-greeting-cards-postcards-design-wedding-invites_90220-1103.jpg)" draggable="false"></span>
+
+<span id="i6" style="background-image:url(https://t4.ftcdn.net/jpg/05/35/33/39/360_F_535333922_tBGFT4qC3bLUrnKWWQhj8pXHS1cQIuFK.jpg)" draggable="false"></span>
+
+<span id="i7" style="background-image:url(https://images.pexels.com/photos/1612351/pexels-photo-1612351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1)" draggable="false"></span>
+
+
+</div>
+
+
 </body>
+<script>const track=document.getElementById("iwrap");
+window.onmousedown=e=>{
+
+
+    var x=e.clientX;
+    track.dataset.mouseDownAt=x;
+    
+    
+    
+    
+    }
+    window.onmouseup=e=>{
+    track.dataset.mouseDownAt=0;
+    
+    track.dataset.pper=track.dataset.percentage;
+    }
+    window.onmousemove=e=>{
+    if(track.dataset.mouseDownAt==="0")return;
+    
+    const md=parseFloat(track.dataset.mouseDownAt)-e.clientX;
+    var mxd=window.innerWidth/2;
+    var percentage=(md/mxd)*-100;
+    
+    const np=parseFloat(track.dataset.pper)+percentage;
+    var k=Math.min(np,0);
+    var h=Math.max(np,-100);
+    if(k!=0&&h!=-100){
+    track.dataset.percentage=np;
+    document.getElementById("i").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    
+    document.getElementById("i1").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i2").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i3").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i4").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i5").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i6").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    document.getElementById("i7").animate({backgroundPosition:(np+100)+"% 50%"},{duration:1200,fill:"forwards"});
+    
+    
+    track.animate({
+    transform:"translate("+np+"%, -50%)"},{duration:1200,fill:"forwards"});
+    
+    
+    }
+    }</script>
 </html>
